@@ -191,6 +191,13 @@ img {
     transition: all 0.25s ease;
 }
 
+.mask {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(12, 26, 91, 0.7);
+    z-index: 2;
+}
+
 @media (min-width: 576px) {
     h1 {
         font-size: 2rem;
@@ -225,6 +232,12 @@ img {
     }
     .container {
         padding: 0 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mask {
+        display: none;
     }
 }
 
@@ -348,9 +361,9 @@ img {
 }
 
 @media (min-width: 768px) {
-    .header {
+    /* .header {
         position: static;
-    }
+    } */
     .header__logo-flag {
         max-width: 30px;
     }
@@ -402,12 +415,18 @@ img {
     width: 100%;
     height: 0.25rem;
     background: linear-gradient(90deg, #1c50fd, #13d552);
+    z-index: 6;
 }
 .hero .container {
     background: url('./../assets/images/hero-bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 6;
 }
 
 .hero__text {
@@ -451,7 +470,7 @@ img {
 
 /* =============== Timer Style Start =============== */
 .timer {
-    background: linear-gradient(#0c1a5b, #061937);
+    background: linear-gradient(#0c1a5b, #061a35);
 }
 .timer-content {
     display: flex;
@@ -607,6 +626,9 @@ img {
 }
 
 @media (min-width: 768px) {
+    .timer {
+        background: linear-gradient(#0c1a5b, #091a48);
+    }
     .timer-content {
         flex-direction: row;
         align-items: stretch;
@@ -618,6 +640,11 @@ img {
 
     .contact__footer {
         padding: 1rem 2rem;
+    }
+}
+@media (min-width: 885px) {
+    .timer {
+        background: linear-gradient(#0c1a5b, #061a35);
     }
 }
 @media (min-width: 992px) {
@@ -643,10 +670,6 @@ img {
 /* =============== Roads Style Start =============== */
 .roads {
     background-color: #061a35;
-    background: url('./../assets/images/roads-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 80% center;
     line-height: 1.7;
     padding: 80px 0;
 }
@@ -675,14 +698,18 @@ img {
     .roads {
         padding: 120px 0;
     }
-    .roads__text p:first-child {
-        width: 50%;
-    }
 }
 
 @media (min-width: 768px) {
     .roads {
+        background: url('./../assets/images/roads-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 80% center;
         padding: 140px 0;
+    }
+    .roads__text p:first-child {
+        width: 50%;
     }
 }
 
@@ -818,8 +845,10 @@ img {
     gap: 1rem;
 }
 .speaker__speaker-img {
-    min-width: 60px;
-    height: 60px;
+    min-width: 50px;
+    width: 50px;
+    min-height: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -830,10 +859,11 @@ img {
 }
 .speaker__speaker-info {
     flex: 1;
+    font-size: 12px;
 }
 .speaker__speaker-info h5 {
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: inherit;
     color: #1f5eea;
 }
 .speaker__speaker-info h5.active {
@@ -848,9 +878,26 @@ img {
     display: flex;
     justify-content: center;
 }
+@media (min-width: 400px) {
+    .speaker__speaker-info {
+        font-size: 14px;
+    }
+}
 @media (min-width: 576px) {
     .speaker__grid {
         grid-template-rows: repeat(3, 1fr);
+    }
+    .speaker__speaker-img {
+        min-width: 60px;
+        width: 60px;
+        min-height: 60px;
+        height: 60px;
+    }
+    .speaker__speaker-info {
+        font-size: 1rem;
+    }
+    .speaker__speaker-info h5 {
+        font-weight: 400;
     }
 }
 
@@ -868,6 +915,8 @@ img {
     }
     .speaker__speaker-img {
         min-width: 80px;
+        width: 80px;
+        min-height: 80px;
         height: 80px;
     }
     .speaker__card-speaker {
@@ -891,6 +940,8 @@ img {
     }
     .speaker__speaker-img {
         min-width: 100px;
+        width: 100px;
+        min-height: 100px;
         height: 100px;
     }
     .speaker__card-text {
