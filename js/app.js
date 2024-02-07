@@ -44,11 +44,9 @@ footerYear.textContent = new Date().getFullYear();
 const items = document.querySelectorAll('.timer__item-time');
 
 //Setting Date
-const now = new Date();
-
-// ** Date Format should be sring
-// new Date('2024-08-31 23:59:00');
-const futureDate = new Date('2024-03-04 01:59:00');
+// Note: Date Format should be sring
+// futureDate = YYYY/MM/DD /HH/MM/SS GMT+0800 => Hong Kong Time zone
+const futureDate = new Date('2024-02-27 12:00:00 GMT+0800');
 
 //const futureDate
 const oneHour = 60 * 60 * 1000;

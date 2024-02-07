@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background-color: var(--color-white);
+    background-color: #061a35;
     font-family: var(--font-red-hat);
     font-size: 1rem;
     color: var(--color-white);
@@ -119,7 +119,8 @@ img {
 }
 .btn-nav:hover {
     background-color: transparent;
-    color: #1f77d9;
+    color: #00b13c;
+    border-color: #00b13c;
 }
 
 .btn-primary {
@@ -129,7 +130,8 @@ img {
 }
 .btn-primary:hover {
     background-color: transparent;
-    color: #1f5eea;
+    color: #00b13c;
+    border-color: #00b13c;
 }
 
 .btn-success {
@@ -233,9 +235,6 @@ img {
     .container {
         padding: 0 20px;
     }
-}
-
-@media (min-width: 992px) {
     .mask {
         display: none;
     }
@@ -355,15 +354,28 @@ img {
 }
 
 .header__menu-link {
+    position: relative;
     display: inline-block;
     color: var(--color-white);
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.header__menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-white);
+    transition: all 0.3s ease;
+}
+.header__menu-link:hover::after {
+    left: 0;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
-    /* .header {
-        position: static;
-    } */
     .header__logo-flag {
         max-width: 30px;
     }
@@ -376,11 +388,10 @@ img {
     }
     .header__menu-list {
         flex-direction: row;
-        gap: 0.25rem;
         border: none;
         padding: 0;
     }
-    .header__menu-link.btn {
+    .header__menu-list .btn {
         margin-left: 12px;
     }
 }
@@ -392,12 +403,14 @@ img {
     .header__logo-flag {
         max-width: 32px;
     }
+    .header__menu-list {
+        gap: 1.25rem;
+    }
 }
 
 @media (min-width: 1200px) {
     .header {
-        padding-top: 2rem;
-        padding-bottom: 1.75rem;
+        padding-top: 1.5rem;
     }
 }
 /* =============== Header Style End =============== */
@@ -418,7 +431,7 @@ img {
     z-index: 6;
 }
 .hero .container {
-    background: url('./../assets/images/hero-bg.jpeg');
+    background: url('./../assets/images/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
@@ -536,15 +549,22 @@ img {
     font-size: 1rem;
 }
 .timer__event-body {
+    background-color: #193268;
+    padding: 1rem;
+}
+
+.timer__event-list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.25rem;
-    padding: 1rem;
-    background-color: #193268;
 }
 
-.timer__event-body img {
+.timer__event-list a {
+    display: block;
+}
+
+.timer__event-list img {
     height: 26px;
     width: auto;
 }
@@ -561,11 +581,12 @@ img {
     justify-content: center;
     align-items: flex-start;
     background-color: #17315f;
+    background-color: #fdfdfe;
 }
 
 .contact__form-header {
     flex: 1;
-    height: 63px;
+    height: 64px;
     background-color: #1f5deb;
 }
 
@@ -605,10 +626,12 @@ img {
         font-size: 1.125rem;
     }
     .timer__event-body {
-        gap: 1.5rem;
         padding: 1.2rem 1rem;
     }
-    .timer__event-body img {
+    .timer__event-list {
+        gap: 1.5rem;
+    }
+    .timer__event-list img {
         height: 32px;
     }
 }
@@ -655,10 +678,12 @@ img {
         transform: translateY(18px);
     }
     .timer__event-body {
-        gap: 2rem;
         padding: 1.2rem 1rem;
     }
-    .timer__event-body img {
+    .timer__event-list {
+        gap: 2rem;
+    }
+    .timer__event-list img {
         height: 40px;
     }
     .contact__footer {
@@ -671,7 +696,8 @@ img {
 .roads {
     background-color: #061a35;
     line-height: 1.7;
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 1rem;
 }
 
 .roads__text {
@@ -694,19 +720,13 @@ img {
     text-wrap: pretty;
 }
 
-@media (min-width: 576px) {
-    .roads {
-        padding: 120px 0;
-    }
-}
-
 @media (min-width: 768px) {
     .roads {
         background: url('./../assets/images/roads-bg.png');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 80% center;
-        padding: 140px 0;
+        background-position: 80% 45%;
+        padding-bottom: 2rem;
     }
     .roads__text p:first-child {
         width: 50%;
@@ -715,7 +735,8 @@ img {
 
 @media (min-width: 992px) {
     .roads {
-        padding: 160px 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     .roads__text {
         width: 50%;
@@ -727,8 +748,8 @@ img {
 
 @media (min-width: 1200px) {
     .roads {
+        background-position: 40% 40%;
         padding: 200px 0;
-        padding-bottom: 180px;
         font-size: 18px;
     }
     .roads__text {
@@ -742,9 +763,7 @@ img {
 
 /* =============== Event Style Start =============== */
 .event {
-    background-color: #061a35;
-    padding-top: 2rem;
-    padding-bottom: 60px;
+    padding: 80px 0;
 }
 
 .event__grid {
@@ -788,14 +807,10 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (min-width: 768px) {
-    .event {
-        padding-bottom: 80px;
-    }
-}
+
 @media (min-width: 992px) {
     .event {
-        padding-bottom: 100px;
+        padding: 100px 0;
     }
     .event__grid {
         grid-template-columns: repeat(4, 1fr);
@@ -807,7 +822,7 @@ img {
 
 @media (min-width: 1200px) {
     .event {
-        padding-bottom: 120px;
+        padding: 120px 0;
     }
     .event__card-body {
         padding: 2rem;
@@ -817,7 +832,8 @@ img {
 
 /* =============== Speaker Style Start =============== */
 .speaker {
-    padding: 60px 0;
+    background-color: var(--color-white);
+    padding: 80px 0;
 }
 
 .speaker h2 {
@@ -902,9 +918,6 @@ img {
 }
 
 @media (min-width: 768px) {
-    .speaker {
-        padding: 80px 0;
-    }
     .speaker__card {
         flex-direction: row;
         align-items: center;
@@ -966,7 +979,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .agenda__table-wrapper {
@@ -1028,12 +1041,6 @@ img {
     padding-top: 1rem;
 }
 
-@media (min-width: 768px) {
-    .agenda {
-        padding: 80px 0;
-    }
-}
-
 @media (min-width: 992px) {
     .agenda {
         padding: 100px 0;
@@ -1066,7 +1073,8 @@ img {
 
 /* =============== Venue Style Start =============== */
 .venue {
-    padding: 60px 0;
+    background-color: var(--color-white);
+    padding: 80px 0;
 }
 
 .venue h2 {
@@ -1135,9 +1143,6 @@ img {
 }
 
 @media (min-width: 768px) {
-    .venue {
-        padding: 80px 0;
-    }
     .venue__card {
         flex-direction: row;
     }
