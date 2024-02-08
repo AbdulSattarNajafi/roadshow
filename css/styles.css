@@ -196,7 +196,7 @@ img {
 .mask {
     position: absolute;
     inset: 0;
-    background-color: rgba(12, 26, 91, 0.7);
+    background-color: rgba(12, 26, 91, 0.4);
     z-index: 2;
 }
 
@@ -418,7 +418,8 @@ img {
 /* =============== Herow Style Start =============== */
 .hero {
     position: relative;
-    background: linear-gradient(180deg, #081771, #0c1a5a);
+    background-color: #0a1970;
+    /* background: linear-gradient(180deg, #081771, #0c1a5a); */
 }
 .hero::before {
     content: '';
@@ -431,10 +432,22 @@ img {
     z-index: 6;
 }
 .hero .container {
+    position: relative;
     background: url('./../assets/images/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
+    overflow-x: hidden;
+}
+
+.hero .container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 100%;
+    background-color: #0a1970;
 }
 
 .hero__content {
@@ -483,7 +496,8 @@ img {
 
 /* =============== Timer Style Start =============== */
 .timer {
-    background: linear-gradient(#0c1a5b, #061a35);
+    background: linear-gradient(#0a1968, #061a35);
+    padding-top: 2rem;
 }
 .timer-content {
     display: flex;
@@ -650,7 +664,7 @@ img {
 
 @media (min-width: 768px) {
     .timer {
-        background: linear-gradient(#0c1a5b, #091a48);
+        background: linear-gradient(#0a1970, #091a48);
     }
     .timer-content {
         flex-direction: row;
@@ -667,7 +681,7 @@ img {
 }
 @media (min-width: 885px) {
     .timer {
-        background: linear-gradient(#0c1a5b, #061a35);
+        background: linear-gradient(#0a1970, #061a35);
     }
 }
 @media (min-width: 992px) {
