@@ -26,6 +26,7 @@ function closeMenu() {
 
 // Show & Hide Button Scroll to Top
 const btnUp = document.querySelector('.btn-up');
+const header = document.querySelector('.header');
 window.onscroll = function () {
     const windowHeight = window.innerHeight;
 
@@ -33,6 +34,12 @@ window.onscroll = function () {
         btnUp.classList.add('show');
     } else {
         btnUp.classList.remove('show');
+    }
+
+    if (window.scrollY >= 20) {
+        header.classList.add('expand');
+    } else {
+        header.classList.remove('expand');
     }
 };
 

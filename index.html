@@ -64,7 +64,8 @@
         <link rel="stylesheet" href="./css/styles.css" />
 
         <!-- Form JS -->
-        <script async>
+        <script src="./js/app.js" defer></script>
+        <script charset="UTF-8">
             (function (h) {
                 function n(a) {
                     return null === a
@@ -172,7 +173,11 @@
                         <img src="./assets/images/flag.png" alt="Flag" class="header__logo-flag" />
                     </div>
 
-                    <button class="header__nav-toggler" id="nav-toggler-btn">
+                    <button
+                        class="header__nav-toggler"
+                        id="nav-toggler-btn"
+                        aria-label="Toggle Menu"
+                    >
                         <span class="top"></span>
                         <span class="middle"></span>
                         <span class="bottom"></span>
@@ -221,7 +226,7 @@
                                 City) Malaysia
                             </p>
                             <time>March 12, 2024 | 09:00-12:00 (GMT +8)</time>
-                            <a href="#" class="btn btn-primary uppercase">Save your seat</a>
+                            <a href="#contact" class="btn btn-primary uppercase">Save your seat</a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +266,7 @@
 
                     <div class="timer__event">
                         <div class="timer__event-header">
-                            <h4>Add This Event To Your Calendar</h4>
+                            <h2>Add This Event To Your Calendar</h2>
                         </div>
                         <div class="timer__event-body">
                             <ul class="timer__event-list">
@@ -387,7 +392,7 @@
                             at Sangfor Roadshow 2024 – where AI meets Synergy to empower Your
                             Digital Success.
                         </h3>
-                        <a href="#" class="btn btn-primary uppercase">Register now</a>
+                        <a href="#contact" class="btn btn-primary uppercase">Register now</a>
                     </div>
                 </div>
             </article>
@@ -402,7 +407,7 @@
                         <!-- Card 1 -->
                         <div class="event__card">
                             <div class="event__card-body">
-                                <h4>Industry Insights</h4>
+                                <h3>Industry Insights</h3>
                                 <p>
                                     Join industry leaders to delve into the latest trends and
                                     developments, understanding their impact on your digital
@@ -416,7 +421,7 @@
                         <!-- Card 2 -->
                         <div class="event__card active">
                             <div class="event__card-body">
-                                <h4>Networking & Exchange</h4>
+                                <h3>Networking & Exchange</h3>
                                 <p>
                                     Connect with industry peers to share experiences and gain fresh
                                     perspectives, inspiring innovative strategies for your business.
@@ -429,7 +434,7 @@
                         <!-- Card 3 -->
                         <div class="event__card">
                             <div class="event__card-body">
-                                <h4>Live Demos</h4>
+                                <h3>Live Demos</h3>
                                 <p>
                                     Marvel at AI-driven technologies and synergized solutions,
                                     witnessing firsthand their transformative potential for your
@@ -443,7 +448,7 @@
                         <!-- Card 4 -->
                         <div class="event__card active">
                             <div class="event__card-body">
-                                <h4>Expert Consultation</h4>
+                                <h3>Expert Consultation</h3>
                                 <p>
                                     Engage one-on-one with Sangfor experts to discuss your unique
                                     challenges and needs, obtaining customized and actionable
@@ -474,7 +479,7 @@
                                     </div>
 
                                     <div class="speaker__speaker-info">
-                                        <h5>Nicholas Tay Chee Seng</h5>
+                                        <h3>Nicholas Tay Chee Seng</h3>
                                         <p>Sangfor Cloud Chief Product Officer</p>
                                     </div>
                                 </div>
@@ -503,7 +508,7 @@
                                     </div>
 
                                     <div class="speaker__speaker-info">
-                                        <h5 class="active">Guy​ Rosefelt</h5>
+                                        <h3 class="active">Guy​ Rosefelt</h3>
                                         <p>Sangfor Chief Product Officer</p>
                                     </div>
                                 </div>
@@ -528,7 +533,7 @@
                                     </div>
 
                                     <div class="speaker__speaker-info">
-                                        <h5>Tian Koon Lee</h5>
+                                        <h3>Tian Koon Lee</h3>
                                         <p>Sangfor Cloud Product Director</p>
                                     </div>
                                 </div>
@@ -695,7 +700,7 @@
                                 </div>
                                 <div class="venue__address-address">
                                     <div class="venue__address-text">
-                                        <h5>Hotel Nikko Saigon</h5>
+                                        <h3>Hotel Nikko Saigon</h3>
                                         <p>
                                             3rd Floor Ballroom, 235 Nguyen Van Cu <br />
                                             Street, District 1, Ho Chi Minh City,<br />
@@ -781,8 +786,5 @@
             </div>
         </footer>
         <!-- ============= Footer End ============== -->
-
-        <!-- ============= JS ============== -->
-        <script src="./js/app.js"></script>
     </body>
 </html>
