@@ -53,7 +53,7 @@ const items = document.querySelectorAll('.timer__item-time');
 //Setting Date
 // Note: Date Format should be sring
 // futureDate = YYYY/MM/DD /HH/MM/SS GMT+0800 => Hong Kong Time zone
-const futureDate = new Date('2024-02-27 12:00:00 GMT+0800');
+const futureDate = new Date('2024-05-27T12:00:00+0800');
 
 //const futureDate
 const oneHour = 60 * 60 * 1000;
